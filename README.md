@@ -12,4 +12,5 @@
   - Network.  
 По завершению развертывания и запуска стенда (старт всех сервисов может занять несколько минут) можно подключиться к веб-консоли  Zabbix указав в адресной строке браузера http://localhost:8080  
 Для выполнения задачи ДЗ, с помощью веб-консоли был добавлен сервер vagrant_host для отслеживания его параметров, а так же создан дашборд (его вид представлен на скрине)
-<img scr="https://github.com/gkronalf/monitoring/tree/284f641447053b4abb9eba484839f11935e94866/screens" alt="Dashboard">
+<img scr="https://github.com/gkronalf/monitoring/blob/e2e2b27c912d5f3efb97e47da47d655a70ed55b0/screens/dashboard.jpeg" alt="Dashboard">
+
