@@ -3,12 +3,12 @@ version: "3.9"
 services:
  
   zabbix-mariadb:
-    image: mariadb
+    image: mariadb:11.1
     container_name: zabbix-mariadb
     hostname: zabbix-mariadb
     restart: unless-stopped
     environment:
-      TZ: "Europe/Astrakhan"
+      TZ: "Europe/Moscow"
       MYSQL_ROOT_USER: root
       MYSQL_ROOT_PASSWORD: 'paswdZabbix!'
       MYSQL_DATABASE: zabbix

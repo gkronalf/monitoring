@@ -25,8 +25,9 @@ Vagrant.configure("2") do |zabbix|
             $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
             sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
             sudo apt-get update
-            apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
+            apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose zabbix-agent
             sudo docker-compose up -d
+            sudo sed -i.bak 's/ServerActive=127.0.0.1/ServerActive=172.28.0.254/g' /etc/zabbix/zabbix_agentd.conf
         SHELL
   zabbix.vm.synced_folder '.', '/vagrant', disabled: true
   end
